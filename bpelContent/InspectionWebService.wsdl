@@ -1,0 +1,153 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:sch0="http://vlsu.ru/schema/vehicle" xmlns:sch1="http://vlsu.ru/schema/inspection"
+	xmlns:sch2="http://vlsu.ru/inspection" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://vlsu.ru/inspection" targetNamespace="http://vlsu.ru/inspection">
+	<wsdl:types>
+		<xs:schema xmlns="http://vlsu.ru/schema/vehicle" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			attributeFormDefault="unqualified" elementFormDefault="qualified"
+			targetNamespace="http://vlsu.ru/schema/vehicle">
+			<xs:complexType name="VehiclePass">
+				<xs:all>
+					<xs:element name="vin" type="VIN" />
+					<xs:element name="model" type="xs:string" />
+					<xs:element name="type" type="xs:string" />
+					<xs:element name="category" type="Category" />
+					<xs:element name="built_year" type="xs:gYear" />
+					<xs:element name="engine_number" type="xs:string" />
+					<xs:element name="chassis_number" type="xs:string" />
+					<xs:element name="body_number" nillable="true" type="xs:string" />
+					<xs:element name="body_color" type="xs:string" />
+				</xs:all>
+			</xs:complexType>
+			<xs:simpleType name="VIN">
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[0-9A-Z]{17}" />
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="Category">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="A" />
+					<xs:enumeration value="B" />
+					<xs:enumeration value="C" />
+					<xs:enumeration value="D" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:schema>
+		<xs:schema xmlns="http://vlsu.ru/schema/inspection"
+			xmlns:ve="http://vlsu.ru/schema/vehicle" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			attributeFormDefault="unqualified" elementFormDefault="qualified"
+			targetNamespace="http://vlsu.ru/schema/inspection">
+			<xs:import namespace="http://vlsu.ru/schema/vehicle" />
+			<xs:complexType name="Inspection">
+				<xs:all>
+					<xs:element name="date" type="xs:date" />
+					<xs:element name="inspector" type="xs:string" />
+					<xs:element name="vehicle" type="ve:VehiclePass" />
+				</xs:all>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema xmlns="http://vlsu.ru/inspection" xmlns:in="http://vlsu.ru/schema/inspection"
+			xmlns:ve="http://vlsu.ru/schema/vehicle" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			attributeFormDefault="unqualified" elementFormDefault="unqualified"
+			targetNamespace="http://vlsu.ru/inspection">
+			<xs:import namespace="http://vlsu.ru/schema/vehicle" />
+			<xs:import namespace="http://vlsu.ru/schema/inspection" />
+			<xs:element name="AddInspectionRequest">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="date" type="xs:date" />
+						<xs:element name="inspector" type="xs:string" />
+						<xs:element maxOccurs="unbounded" name="vehicle_pass_list"
+							type="ve:VehiclePass" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="AddInspectionResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element maxOccurs="unbounded" name="inspection_list"
+							type="in:Inspection" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="CheckInspectionRequest">
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="vehicle" type="ve:VehiclePass" />
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="CheckInspectionResponse">
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="result" type="xs:boolean" />
+						<xs:element name="vehicle" type="ve:VehiclePass" />
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="CheckInspectionFault">
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="message" type="xs:string" />
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="AddInspectionRequest">
+		<wsdl:part element="tns:AddInspectionRequest" name="AddInspectionRequest"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="CheckInspectionRequest">
+		<wsdl:part element="tns:CheckInspectionRequest" name="CheckInspectionRequest"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="CheckInspectionFault">
+		<wsdl:part element="tns:CheckInspectionFault" name="CheckInspectionFault"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="AddInspectionResponse">
+		<wsdl:part element="tns:AddInspectionResponse" name="AddInspectionResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="CheckInspectionResponse">
+		<wsdl:part element="tns:CheckInspectionResponse" name="CheckInspectionResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="Inspection">
+		<wsdl:operation name="AddInspection">
+			<wsdl:input message="tns:AddInspectionRequest" name="AddInspectionRequest"></wsdl:input>
+			<wsdl:output message="tns:AddInspectionResponse" name="AddInspectionResponse"></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="CheckInspection">
+			<wsdl:input message="tns:CheckInspectionRequest" name="CheckInspectionRequest"></wsdl:input>
+			<wsdl:output message="tns:CheckInspectionResponse" name="CheckInspectionResponse"></wsdl:output>
+			<wsdl:fault message="tns:CheckInspectionFault" name="CheckInspectionFault"></wsdl:fault>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="InspectionSoap11" type="tns:Inspection">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="AddInspection">
+			<soap:operation soapAction="" />
+			<wsdl:input name="AddInspectionRequest">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="AddInspectionResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="CheckInspection">
+			<soap:operation soapAction="" />
+			<wsdl:input name="CheckInspectionRequest">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="CheckInspectionResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="CheckInspectionFault">
+				<soap:fault name="CheckInspectionFault" use="literal" />
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="InspectionService">
+		<wsdl:port binding="tns:InspectionSoap11" name="InspectionSoap11">
+			<soap:address location="http://localhost:54324/services/Inspection" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

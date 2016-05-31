@@ -1,0 +1,222 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:sch0="http://vlsu.ru/schema/citizen" xmlns:sch1="http://vlsu.ru/schema/vehicle"
+	xmlns:sch2="http://vlsu.ru/schema/owner" xmlns:sch3="http://vlsu.ru/schema/registration"
+	xmlns:sch4="http://vlsu.ru/registervehicle" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://vlsu.ru/registervehicle" targetNamespace="http://vlsu.ru/registervehicle">
+	<wsdl:types>
+		<xs:schema xmlns="http://vlsu.ru/schema/citizen" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			attributeFormDefault="unqualified" elementFormDefault="qualified"
+			targetNamespace="http://vlsu.ru/schema/citizen">
+			<xs:complexType name="Citizen">
+				<xs:all>
+					<xs:element name="firstname" type="xs:string" />
+					<xs:element name="middlename" nillable="true" type="xs:string" />
+					<xs:element name="lastname" type="xs:string" />
+					<xs:element name="gender" type="Gender" />
+					<xs:element name="birthday" type="xs:date" />
+					<xs:element name="birth_place" type="xs:string" />
+					<xs:element name="passport" type="Passport" />
+				</xs:all>
+			</xs:complexType>
+			<xs:simpleType name="Gender">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="male" />
+					<xs:enumeration value="female" />
+					<xs:enumeration value="other" />
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:complexType name="Passport">
+				<xs:all>
+					<xs:element name="series">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:length value="4" />
+								<xs:pattern value="[0-9]+" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="number">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:length value="6" />
+								<xs:pattern value="[0-9]+" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="issue_date" type="xs:date" />
+					<xs:element name="issued_by" type="xs:string" />
+					<xs:element name="registration" type="Registration" />
+				</xs:all>
+			</xs:complexType>
+			<xs:complexType name="Registration">
+				<xs:all>
+					<xs:element name="region" type="xs:string" />
+					<xs:element name="district" nillable="true" type="xs:string" />
+					<xs:element name="city" type="xs:string" />
+					<xs:element name="address" type="xs:string" />
+					<xs:element name="date" type="xs:date" />
+				</xs:all>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema xmlns="http://vlsu.ru/schema/vehicle" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			attributeFormDefault="unqualified" elementFormDefault="qualified"
+			targetNamespace="http://vlsu.ru/schema/vehicle">
+			<xs:complexType name="VehiclePass">
+				<xs:all>
+					<xs:element name="vin" type="VIN" />
+					<xs:element name="model" type="xs:string" />
+					<xs:element name="type" type="xs:string" />
+					<xs:element name="category" type="Category" />
+					<xs:element name="built_year" type="xs:gYear" />
+					<xs:element name="engine_number" type="xs:string" />
+					<xs:element name="chassis_number" type="xs:string" />
+					<xs:element name="body_number" nillable="true" type="xs:string" />
+					<xs:element name="body_color" type="xs:string" />
+				</xs:all>
+			</xs:complexType>
+			<xs:simpleType name="VIN">
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[0-9A-Z]{17}" />
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="Category">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="A" />
+					<xs:enumeration value="B" />
+					<xs:enumeration value="C" />
+					<xs:enumeration value="D" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:schema>
+		<xs:schema xmlns="http://vlsu.ru/schema/owner" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			attributeFormDefault="unqualified" elementFormDefault="qualified"
+			targetNamespace="http://vlsu.ru/schema/owner">
+			<xs:complexType name="Owner">
+				<xs:all>
+					<xs:element name="firstname" type="xs:string" />
+					<xs:element name="middlename" nillable="true" type="xs:string" />
+					<xs:element name="lastname" type="xs:string" />
+					<xs:element name="region" type="xs:string" />
+					<xs:element name="district" nillable="true" type="xs:string" />
+					<xs:element name="city" type="xs:string" />
+					<xs:element name="address" type="xs:string" />
+				</xs:all>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema xmlns="http://vlsu.ru/schema/registration"
+			xmlns:ow="http://vlsu.ru/schema/owner" xmlns:ve="http://vlsu.ru/schema/vehicle"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+			elementFormDefault="qualified" targetNamespace="http://vlsu.ru/schema/registration">
+			<xs:import namespace="http://vlsu.ru/schema/vehicle" />
+			<xs:import namespace="http://vlsu.ru/schema/owner" />
+			<xs:complexType name="RegistrationCertificate">
+				<xs:all>
+					<xs:element name="registration_number">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:pattern value="[A-Z][0-9]{3}[A-Z]{2}" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="vehicle" type="ve:VehiclePass" />
+					<xs:element name="owner" type="ow:Owner" />
+					<xs:element name="issue_place" type="xs:string" />
+					<xs:element name="issue_date" type="xs:date" />
+				</xs:all>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema xmlns="http://vlsu.ru/registervehicle" xmlns:ci="http://vlsu.ru/schema/citizen"
+			xmlns:rc="http://vlsu.ru/schema/registration" xmlns:ve="http://vlsu.ru/schema/vehicle"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified"
+			elementFormDefault="unqualified" targetNamespace="http://vlsu.ru/registervehicle">
+			<xs:import namespace="http://vlsu.ru/schema/citizen" />
+			<xs:import namespace="http://vlsu.ru/schema/vehicle" />
+			<xs:import namespace="http://vlsu.ru/schema/registration" />
+			<xs:element name="RegisterVehicleRequest">
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="citizen" type="ci:Citizen" />
+						<xs:element name="vehicle_pass" type="ve:VehiclePass" />
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="RegisterVehicleResponse">
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="registration_certificate" type="rc:RegistrationCertificate" />
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="FindRegistrationCertificateRequest">
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="citizen" type="ci:Citizen" />
+						<xs:element name="vehicle_pass" type="ve:VehiclePass" />
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="FindRegistrationCertificateResponse">
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="result" type="xs:boolean" />
+						<xs:element name="registration_certificate" nillable="true"
+							type="rc:RegistrationCertificate" />
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="RegisterVehicleRequest">
+		<wsdl:part element="tns:RegisterVehicleRequest" name="RegisterVehicleRequest"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="FindRegistrationCertificateRequest">
+		<wsdl:part element="tns:FindRegistrationCertificateRequest"
+			name="FindRegistrationCertificateRequest"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="RegisterVehicleResponse">
+		<wsdl:part element="tns:RegisterVehicleResponse" name="RegisterVehicleResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="FindRegistrationCertificateResponse">
+		<wsdl:part element="tns:FindRegistrationCertificateResponse"
+			name="FindRegistrationCertificateResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="RegisterVehicle">
+		<wsdl:operation name="RegisterVehicle">
+			<wsdl:input message="tns:RegisterVehicleRequest" name="RegisterVehicleRequest"></wsdl:input>
+			<wsdl:output message="tns:RegisterVehicleResponse" name="RegisterVehicleResponse"></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="FindRegistrationCertificate">
+			<wsdl:input message="tns:FindRegistrationCertificateRequest"
+				name="FindRegistrationCertificateRequest"></wsdl:input>
+			<wsdl:output message="tns:FindRegistrationCertificateResponse"
+				name="FindRegistrationCertificateResponse"></wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="RegisterVehicleSoap11" type="tns:RegisterVehicle">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="RegisterVehicle">
+			<soap:operation soapAction="" />
+			<wsdl:input name="RegisterVehicleRequest">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="RegisterVehicleResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="FindRegistrationCertificate">
+			<soap:operation soapAction="" />
+			<wsdl:input name="FindRegistrationCertificateRequest">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="FindRegistrationCertificateResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="RegisterVehicleService">
+		<wsdl:port binding="tns:RegisterVehicleSoap11" name="RegisterVehicleSoap11">
+			<soap:address location="http://localhost:54322/services/RegisterVehicle" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

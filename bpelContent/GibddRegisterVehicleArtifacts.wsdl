@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://vlsu.ru/gibdd" xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop" xmlns:wsdl="http://vlsu.ru/blacklistcheck" xmlns:wsdl1="http://vlsu.ru/inspection" xmlns:wsdl2="http://vlsu.ru/insurance" xmlns:wsdl3="http://vlsu.ru/registervehicle" xmlns:wsdl4="http://vlsu.ru/signature" name="GibddRegisterVehicle" targetNamespace="http://vlsu.ru/gibdd">
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		TYPE DEFINITION - List of types participating in this BPEL process The BPEL 
+		Designer will generate default request and response types but you can define 
+		or import any XML Schema type and use them as part of the message types. 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <plnk:partnerLinkType name="BlackListCheckPLT">
+    <plnk:role name="BlackListCheckType" portType="wsdl:BlackListCheck"/>
+  </plnk:partnerLinkType>
+    <plnk:partnerLinkType name="InspectionPLT">
+    <plnk:role name="InspectionType" portType="wsdl1:Inspection"/>
+  </plnk:partnerLinkType>
+    <plnk:partnerLinkType name="InsurancePLT">
+    <plnk:role name="InsuranceType" portType="wsdl2:Insurance"/>
+  </plnk:partnerLinkType>
+    <plnk:partnerLinkType name="RegisterVehiclePLT">
+    <plnk:role name="RegisterVehicleType" portType="wsdl3:RegisterVehicle"/>
+  </plnk:partnerLinkType>
+    <plnk:partnerLinkType name="SignaturePLT">
+    <plnk:role name="SignatureType" portType="wsdl4:Signature"/>
+  </plnk:partnerLinkType>
+    <import location="BlackListCheckWebService.wsdl" namespace="http://vlsu.ru/blacklistcheck"/>
+    <import location="InspectionWebService.wsdl" namespace="http://vlsu.ru/inspection"/>
+    <import location="InsuranceWebService.wsdl" namespace="http://vlsu.ru/insurance"/>
+    <import location="RegisterWebService.wsdl" namespace="http://vlsu.ru/registervehicle"/>
+    <import location="SignatureWebService.wsdl" namespace="http://vlsu.ru/signature"/>
+    <types>
+		<xs:schema xmlns="http://vlsu.ru/schema/citizen" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://vlsu.ru/schema/citizen">
+			<xs:complexType name="Citizen">
+				<xs:all>
+					<xs:element name="firstname" type="xs:string"/>
+					<xs:element name="middlename" nillable="true" type="xs:string"/>
+					<xs:element name="lastname" type="xs:string"/>
+					<xs:element name="gender" type="Gender"/>
+					<xs:element name="birthday" type="xs:date"/>
+					<xs:element name="birth_place" type="xs:string"/>
+					<xs:element name="passport" type="Passport"/>
+				</xs:all>
+			</xs:complexType>
+			<xs:simpleType name="Gender">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="male"/>
+					<xs:enumeration value="female"/>
+					<xs:enumeration value="other"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:complexType name="Passport">
+				<xs:all>
+					<xs:element name="series">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:length value="4"/>
+								<xs:pattern value="[0-9]+"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="number">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:length value="6"/>
+								<xs:pattern value="[0-9]+"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="issue_date" type="xs:date"/>
+					<xs:element name="issued_by" type="xs:string"/>
+					<xs:element name="registration" type="Registration"/>
+				</xs:all>
+			</xs:complexType>
+			<xs:complexType name="Registration">
+				<xs:all>
+					<xs:element name="region" type="xs:string"/>
+					<xs:element name="district" nillable="true" type="xs:string"/>
+					<xs:element name="city" type="xs:string"/>
+					<xs:element name="address" type="xs:string"/>
+					<xs:element name="date" type="xs:date"/>
+				</xs:all>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema xmlns="http://vlsu.ru/schema/vehicle" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://vlsu.ru/schema/vehicle">
+			<xs:complexType name="VehiclePass">
+				<xs:all>
+					<xs:element name="vin" type="VIN"/>
+					<xs:element name="model" type="xs:string"/>
+					<xs:element name="type" type="xs:string"/>
+					<xs:element name="category" type="Category"/>
+					<xs:element name="built_year" type="xs:gYear"/>
+					<xs:element name="engine_number" type="xs:string"/>
+					<xs:element name="chassis_number" type="xs:string"/>
+					<xs:element name="body_number" nillable="true" type="xs:string"/>
+					<xs:element name="body_color" type="xs:string"/>
+				</xs:all>
+			</xs:complexType>
+			<xs:simpleType name="VIN">
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[0-9A-Z]{17}"/>
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="Category">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="A"/>
+					<xs:enumeration value="B"/>
+					<xs:enumeration value="C"/>
+					<xs:enumeration value="D"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:schema>
+		<xs:schema xmlns="http://vlsu.ru/schema/owner" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://vlsu.ru/schema/owner">
+			<xs:complexType name="Owner">
+				<xs:all>
+					<xs:element name="firstname" type="xs:string"/>
+					<xs:element name="middlename" nillable="true" type="xs:string"/>
+					<xs:element name="lastname" type="xs:string"/>
+					<xs:element name="region" type="xs:string"/>
+					<xs:element name="district" nillable="true" type="xs:string"/>
+					<xs:element name="city" type="xs:string"/>
+					<xs:element name="address" type="xs:string"/>
+				</xs:all>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema xmlns="http://vlsu.ru/schema/registration" xmlns:ow="http://vlsu.ru/schema/owner" xmlns:ve="http://vlsu.ru/schema/vehicle" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://vlsu.ru/schema/registration">
+			<xs:import namespace="http://vlsu.ru/schema/vehicle"/>
+			<xs:import namespace="http://vlsu.ru/schema/owner"/>
+			<xs:complexType name="RegistrationCertificate">
+				<xs:all>
+					<xs:element name="registration_number">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:pattern value="[A-Z][0-9]{3}[A-Z]{2}"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="vehicle" type="ve:VehiclePass"/>
+					<xs:element name="owner" type="ow:Owner"/>
+					<xs:element name="issue_place" type="xs:string"/>
+					<xs:element name="issue_date" type="xs:date"/>
+				</xs:all>
+			</xs:complexType>
+		</xs:schema>
+		<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:cit="http://vlsu.ru/schema/citizen" xmlns:regi="http://vlsu.ru/schema/registration" xmlns:veh="http://vlsu.ru/schema/vehicle" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://vlsu.ru/gibdd">
+			<import namespace="http://vlsu.ru/schema/citizen"/>
+			<import namespace="http://vlsu.ru/schema/vehicle"/>
+			<import namespace="http://vlsu.ru/schema/registration"/>
+
+			<element name="GibddRegisterVehicleRequest">
+				<complexType>
+					<sequence>
+						<element name="citizen" type="cit:Citizen"/>
+						<element name="vehicle_pass" type="veh:VehiclePass"/>
+					</sequence>
+				</complexType>
+			</element>
+
+			<element name="GibddRegisterVehicleResponse">
+				<complexType>
+					<sequence>
+						<element name="registration_certificate" type="regi:RegistrationCertificate"/>
+					</sequence>
+				</complexType>
+			</element>
+			
+			<element name="GibddRegisterVehicleFault">
+				<complexType>
+					<sequence>
+						<element name="message" nillable="true" type="string"/>
+					</sequence>
+				</complexType>
+			</element>
+		</schema>
+	</types>
+
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		MESSAGE TYPE DEFINITION - Definition of the message types used as part of 
+		the port type defintions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<message name="GibddRegisterVehicleRequest">
+		<part element="tns:GibddRegisterVehicleRequest" name="GibddRegisterVehicleRequest"/>
+	</message>
+	<message name="GibddRegisterVehicleResponse">
+		<part element="tns:GibddRegisterVehicleResponse" name="GibddRegisterVehicleResponse"/>
+	</message>
+	<message name="GibddRegisterVehicleFault">
+		<part element="tns:GibddRegisterVehicleFault" name="GibddRegisterVehicleFault"/>
+	</message>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		PORT TYPE DEFINITION - A port type groups a set of operations into a logical 
+		service unit. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+	<!-- portType implemented by the GibddRegisterVehicle BPEL process -->
+	<portType name="GibddRegisterVehicle">
+		<operation name="GibddRegisterVehicle">
+			<input message="tns:GibddRegisterVehicleRequest" name="GibddRegisterVehicleRequest"/>
+			<output message="tns:GibddRegisterVehicleResponse" name="GibddRegisterVehicleResponse"/>
+			<fault message="tns:GibddRegisterVehicleFault" name="GibddRegisterVehicleFault"/>
+		</operation>
+	</portType>
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		PARTNER LINK TYPE DEFINITION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<plnk:partnerLinkType name="GibddRegisterVehicle">
+		<plnk:role name="GibddRegisterVehicleProvider" portType="tns:GibddRegisterVehicle"/>
+	</plnk:partnerLinkType>
+
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		BINDING DEFINITION - Defines the message format and protocol details for 
+		a web service. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<binding name="GibddRegisterVehicleBinding" type="tns:GibddRegisterVehicle">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="GibddRegisterVehicle">
+			<soap:operation soapAction="http://vlsu.ru/gibdd/process"/>
+			<input name="GibddRegisterVehicleRequest">
+				<soap:body use="literal"/>
+			</input>
+			<output name="GibddRegisterVehicleResponse">
+				<soap:body use="literal"/>
+			</output>
+			<fault name="GibddRegisterVehicleFault">
+				<soap:fault name="GibddRegisterVehicleFault" use="literal"/>
+			</fault>
+		</operation>
+	</binding>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		SERVICE DEFINITION - A service groups a set of ports into a service unit. 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<service name="GibddRegisterVehicleService">
+		<port binding="tns:GibddRegisterVehicleBinding" name="GibddRegisterVehiclePort">
+			<soap:address location="http://localhost:8080/ode/processes/GibddRegisterVehicle"/>
+		</port>
+	</service>
+</definitions>

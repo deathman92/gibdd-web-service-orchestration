@@ -1,0 +1,177 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:sch0="http://vlsu.ru/schema/citizen" xmlns:sch1="http://vlsu.ru/schema/vehicle"
+	xmlns:sch2="http://vlsu.ru/signature" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://vlsu.ru/signature" targetNamespace="http://vlsu.ru/signature">
+	<wsdl:types>
+		<xs:schema xmlns="http://vlsu.ru/schema/citizen" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			attributeFormDefault="unqualified" elementFormDefault="qualified"
+			targetNamespace="http://vlsu.ru/schema/citizen">
+			<xs:complexType name="Citizen">
+				<xs:all>
+					<xs:element name="firstname" type="xs:string" />
+					<xs:element name="middlename" nillable="true" type="xs:string" />
+					<xs:element name="lastname" type="xs:string" />
+					<xs:element name="gender" type="Gender" />
+					<xs:element name="birthday" type="xs:date" />
+					<xs:element name="birth_place" type="xs:string" />
+					<xs:element name="passport" type="Passport" />
+				</xs:all>
+			</xs:complexType>
+			<xs:simpleType name="Gender">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="male" />
+					<xs:enumeration value="female" />
+					<xs:enumeration value="other" />
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:complexType name="Passport">
+				<xs:all>
+					<xs:element name="series">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:length value="4" />
+								<xs:pattern value="[0-9]+" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="number">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:length value="6" />
+								<xs:pattern value="[0-9]+" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="issue_date" type="xs:date" />
+					<xs:element name="issued_by" type="xs:string" />
+					<xs:element name="registration" type="Registration" />
+				</xs:all>
+			</xs:complexType>
+			<xs:complexType name="Registration">
+				<xs:all>
+					<xs:element name="region" type="xs:string" />
+					<xs:element name="district" nillable="true" type="xs:string" />
+					<xs:element name="city" type="xs:string" />
+					<xs:element name="address" type="xs:string" />
+					<xs:element name="date" type="xs:date" />
+				</xs:all>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema xmlns="http://vlsu.ru/schema/vehicle" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			attributeFormDefault="unqualified" elementFormDefault="qualified"
+			targetNamespace="http://vlsu.ru/schema/vehicle">
+			<xs:complexType name="VehiclePass">
+				<xs:all>
+					<xs:element name="vin" type="VIN" />
+					<xs:element name="model" type="xs:string" />
+					<xs:element name="type" type="xs:string" />
+					<xs:element name="category" type="Category" />
+					<xs:element name="built_year" type="xs:gYear" />
+					<xs:element name="engine_number" type="xs:string" />
+					<xs:element name="chassis_number" type="xs:string" />
+					<xs:element name="body_number" nillable="true" type="xs:string" />
+					<xs:element name="body_color" type="xs:string" />
+				</xs:all>
+			</xs:complexType>
+			<xs:simpleType name="VIN">
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[0-9A-Z]{17}" />
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="Category">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="A" />
+					<xs:enumeration value="B" />
+					<xs:enumeration value="C" />
+					<xs:enumeration value="D" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:schema>
+		<xs:schema xmlns="http://vlsu.ru/signature" xmlns:ci="http://vlsu.ru/schema/citizen"
+			xmlns:ve="http://vlsu.ru/schema/vehicle" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			attributeFormDefault="unqualified" elementFormDefault="qualified"
+			targetNamespace="http://vlsu.ru/signature">
+			<xs:import namespace="http://vlsu.ru/schema/citizen" />
+			<xs:import namespace="http://vlsu.ru/schema/vehicle" />
+			<xs:element name="GenerateSignatureRequest">
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="citizen" type="ci:Citizen" />
+						<xs:element name="vehicle" type="ve:VehiclePass" />
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GenerateSignatureResponse">
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="signatue" type="xs:string" />
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="VerifySignatureRequest">
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="signature" type="xs:string" />
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="VerifySignatureResponse">
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="result" type="xs:boolean" />
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="GenerateSignatureRequest">
+		<wsdl:part element="tns:GenerateSignatureRequest" name="GenerateSignatureRequest"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="GenerateSignatureResponse">
+		<wsdl:part element="tns:GenerateSignatureResponse" name="GenerateSignatureResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="VerifySignatureResponse">
+		<wsdl:part element="tns:VerifySignatureResponse" name="VerifySignatureResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="VerifySignatureRequest">
+		<wsdl:part element="tns:VerifySignatureRequest" name="VerifySignatureRequest"></wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="Signature">
+		<wsdl:operation name="GenerateSignature">
+			<wsdl:input message="tns:GenerateSignatureRequest" name="GenerateSignatureRequest"></wsdl:input>
+			<wsdl:output message="tns:GenerateSignatureResponse"
+				name="GenerateSignatureResponse"></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="VerifySignature">
+			<wsdl:input message="tns:VerifySignatureRequest" name="VerifySignatureRequest"></wsdl:input>
+			<wsdl:output message="tns:VerifySignatureResponse" name="VerifySignatureResponse"></wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="SignatureSoap11" type="tns:Signature">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="GenerateSignature">
+			<soap:operation soapAction="" />
+			<wsdl:input name="GenerateSignatureRequest">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="GenerateSignatureResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="VerifySignature">
+			<soap:operation soapAction="" />
+			<wsdl:input name="VerifySignatureRequest">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="VerifySignatureResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="SignatureService">
+		<wsdl:port binding="tns:SignatureSoap11" name="SignatureSoap11">
+			<soap:address location="http://localhost:54323/services/Signature" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

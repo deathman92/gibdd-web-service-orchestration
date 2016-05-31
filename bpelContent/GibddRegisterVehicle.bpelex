@@ -1,0 +1,931 @@
+<?xml version="1.0" encoding="ASCII"?>
+<extensionmodel:ExtensionMap xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:extensionmodel="http:///extensionmodel.ecore" xmlns:org.eclipse.bpel.ui.uiextensionmodel="http:///org/eclipse/bpel/ui/uiextensionmodel.ecore" namespace="http://org.eclipse.bpel.ui/">
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@variables/@children.0"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:VariableExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@variables/@children.1"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:VariableExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.0"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.4"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#/"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ProcessExtension" modificationStamp="1464722776871"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@variables/@children.2"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:VariableExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@variables/@children.3"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:VariableExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@variables/@children.4"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:VariableExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.1"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.1/@copy.1"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.1/@copy.2"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.1/@copy.3"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.1/@copy.0"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.1/@copy.4"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.1/@copy.5"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.1/@copy.6"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.1/@copy.7"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.1/@copy.8"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.1/@copy.9"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.1/@copy.10"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.1/@copy.11"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.1/@copy.12"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.1/@copy.13"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.1/@copy.14"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.1/@copy.15"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.2"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension" width="574" height="300"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.0"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension" x="-11" y="16" width="-1" height="-1"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.1/@activities.0"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension" x="189" y="15" width="-1" height="-1"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.0/@copy.0"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.1/@activities.0/@copy.0"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@else/@activity/@activities.0"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@else/@activity/@activities.0/@copy.0"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@else/@activity"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@else/@activity/@activities.1"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@variables/@children.5"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:VariableExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@variables/@children.6"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:VariableExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.0/@copy.1"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.0/@copy.2"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.0/@copy.3"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.0/@copy.4"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.0/@copy.5"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.0/@copy.6"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.0/@copy.7"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.0/@copy.8"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.0/@copy.9"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.0/@copy.10"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.0/@copy.11"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.0/@copy.12"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.0/@copy.13"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.0/@copy.14"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.0/@copy.15"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.0/@copy.16"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.0/@copy.17"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.0/@copy.18"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.0/@copy.19"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.0/@copy.20"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.0/@copy.21"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.0/@copy.22"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.0/@copy.23"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.0/@copy.24"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.1"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension" x="42" y="100" width="-1" height="-1"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension" x="-1" y="14" width="-1" height="-1"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.1"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension" x="1001" y="15" width="-1" height="-1"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@activity"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@activity/@copy.0"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.0"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@variables/@children.7"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:VariableExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@variables/@children.8"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:VariableExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.0/@copy.0"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.0/@copy.1"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.0/@copy.2"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.0/@copy.3"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.0/@copy.4"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.0/@copy.5"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.0/@copy.6"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.0/@copy.7"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.0/@copy.8"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.0/@copy.9"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.1"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@variables/@children.9"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:VariableExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@variables/@children.10"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:VariableExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@variables/@children.11"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:VariableExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@variables/@children.12"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:VariableExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.0"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.0"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.0"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.0/@copy.0"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.1"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.2"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.3"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.4"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.5"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.6"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.7"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.8"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.9"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.10"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.11"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.12"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.13"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.14"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.15"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.16"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.17"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.18"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.19"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.20"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.21"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.22"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.23"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.24"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.1"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.2"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.0"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.1"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.2"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.3"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.0/@copy.1"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.0/@copy.2"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.0/@copy.3"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.0/@copy.4"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.0/@copy.5"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.0/@copy.6"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.0/@copy.7"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.0/@copy.8"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.0/@copy.9"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.1"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.0"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.0"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.0/@copy.0"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@else/@activity"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.1"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.0"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.1"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.2"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.3"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.4"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.5"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.6"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.7"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.8"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.9"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.10"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.11"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.12"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.13"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.14"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.15"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.16"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.17"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.18"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.19"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.20"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.21"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.22"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.23"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.0/@copy.24"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.1"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.0"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.1"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.2"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.3"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.4"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.5"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.6"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.7"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.8"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.9"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.10"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.11"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.12"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.13"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.14"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.15"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.16"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.17"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.18"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.19"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@else/@activity/@activities.2/@activity/@activities.2"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.4"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.5"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.6"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.7"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.8"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.9"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.10"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.11"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.12"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.13"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.14"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.15"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.16"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.17"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.18"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@else/@activity/@activities.2/@activity/@activities.2/@copy.19"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@activity/@copy.1"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@activity/@copy.2"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@activity/@copy.3"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@activity/@copy.4"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@activity/@copy.5"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@activity/@copy.6"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@activity/@copy.7"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@activity/@copy.8"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@activity/@copy.9"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@activity/@copy.10"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@activity/@copy.11"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@activity/@copy.12"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@activity/@copy.13"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@activity/@copy.14"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@activity/@copy.15"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@activity/@copy.16"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@activity/@copy.17"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@activity/@copy.18"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.0/@activities.2/@activity/@copy.19"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@variables/@children.13"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:VariableExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@variables/@children.14"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:VariableExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.1/@activities.1"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.1/@activities.2"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@variables/@children.15"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:VariableExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@variables/@children.16"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:VariableExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.1/@activities.2/@copy.0"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:CopyExtension"/>
+  </extensions>
+  <extensions>
+    <extendedObject href="GibddRegisterVehicle.bpel#//@activity/@activities.3/@activity/@activities.1/@activities.3"/>
+    <extensionObject xsi:type="org.eclipse.bpel.ui.uiextensionmodel:ActivityExtension"/>
+  </extensions>
+</extensionmodel:ExtensionMap>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://vlsu.ru/insurance"
+    xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+    xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+    xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ws="http://vlsu.ru/insurance">
+    
+    <wsdl:types>
+    	<xs:schema xmlns="http://vlsu.ru/schema/citizen" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			attributeFormDefault="unqualified" elementFormDefault="qualified"
+			targetNamespace="http://vlsu.ru/schema/citizen">
+			<xs:complexType name="Citizen">
+				<xs:all>
+					<xs:element name="firstname" type="xs:string" />
+					<xs:element name="middlename" nillable="true" type="xs:string" />
+					<xs:element name="lastname" type="xs:string" />
+					<xs:element name="gender" type="Gender" />
+					<xs:element name="birthday" type="xs:date" />
+					<xs:element name="birth_place" type="xs:string" />
+					<xs:element name="passport" type="Passport" />
+				</xs:all>
+			</xs:complexType>
+			<xs:simpleType name="Gender">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="male" />
+					<xs:enumeration value="female" />
+					<xs:enumeration value="other" />
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:complexType name="Passport">
+				<xs:all>
+					<xs:element name="series">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:length value="4" />
+								<xs:pattern value="[0-9]+" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="number">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:length value="6" />
+								<xs:pattern value="[0-9]+" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="issue_date" type="xs:date" />
+					<xs:element name="issued_by" type="xs:string" />
+					<xs:element name="registration" type="Registration" />
+				</xs:all>
+			</xs:complexType>
+			<xs:complexType name="Registration">
+				<xs:all>
+					<xs:element name="region" type="xs:string" />
+					<xs:element name="district" nillable="true" type="xs:string" />
+					<xs:element name="city" type="xs:string" />
+					<xs:element name="address" type="xs:string" />
+					<xs:element name="date" type="xs:date" />
+				</xs:all>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema xmlns="http://vlsu.ru/schema/vehicle" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			attributeFormDefault="unqualified" elementFormDefault="qualified"
+			targetNamespace="http://vlsu.ru/schema/vehicle">
+			<xs:complexType name="VehiclePass">
+				<xs:all>
+					<xs:element name="vin" type="VIN" />
+					<xs:element name="model" type="xs:string" />
+					<xs:element name="type" type="xs:string" />
+					<xs:element name="category" type="Category" />
+					<xs:element name="built_year" type="xs:gYear" />
+					<xs:element name="engine_number" type="xs:string" />
+					<xs:element name="chassis_number" type="xs:string" />
+					<xs:element name="body_number" nillable="true" type="xs:string" />
+					<xs:element name="body_color" type="xs:string" />
+				</xs:all>
+			</xs:complexType>
+			<xs:simpleType name="VIN">
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[0-9A-Z]{17}" />
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="Category">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="A" />
+					<xs:enumeration value="B" />
+					<xs:enumeration value="C" />
+					<xs:enumeration value="D" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:schema>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://vlsu.ru/insurance"
+        	xmlns:ws="http://vlsu.ru/insurance"
+        	xmlns:ci="http://vlsu.ru/schema/citizen" xmlns:ve="http://vlsu.ru/schema/vehicle">
+        	<xs:import namespace="http://vlsu.ru/schema/citizen" />
+			<xs:import namespace="http://vlsu.ru/schema/vehicle" />
+            <xs:complexType name="InsurancePolicy"/>
+		    <xs:element name="GetInsuranceRequest">
+		        <xs:complexType>
+		            <xs:all>
+		                <xs:element name="signature" type="xs:string"/>
+		                <xs:element name="citizen" type="ci:Citizen"/>
+		                <xs:element name="vehicle" type="ve:VehiclePass"/>
+		            </xs:all>
+		        </xs:complexType>
+		    </xs:element>
+		    <xs:element name="GetInsuranceResponse">
+		        <xs:complexType>
+		            <xs:all>
+		                <xs:element name="InsuransePolicy" type="ws:InsurancePolicy"/>
+		            </xs:all>
+		        </xs:complexType>
+		    </xs:element>
+		    <xs:element name="GetInsuranceFault">
+		        <xs:complexType>
+		            <xs:all>
+		                <xs:element name="message" type="xs:string"/>
+		            </xs:all>
+		        </xs:complexType>
+		    </xs:element>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="getInsuranceRequest">
+        <wsdl:part name="getInsuranceRequest" element="ws:GetInsuranceRequest"/>
+    </wsdl:message>
+    <wsdl:message name="getInsuranceResponse">
+        <wsdl:part name="getInsuranceResponse" element="ws:GetInsuranceResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getInsuranceFault">
+        <wsdl:part name="getInsuranceFault" element="ws:GetInsuranceFault"/>
+    </wsdl:message>
+    <wsdl:portType name="Insurance">
+        <wsdl:operation name="getInsurance">
+            <wsdl:input message="ws:getInsuranceRequest" name="getInsuranceRequest"/>
+            <wsdl:output message="ws:getInsuranceResponse" name="getInsuranceResponse"/>
+            <wsdl:fault message="ws:getInsuranceFault" name="getInsuranceFault"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="InsuranceSoap" type="ws:Insurance">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="getInsurance">
+            <soap:operation soapAction="" />
+            <wsdl:input name="getInsuranceRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getInsuranceResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="getInsuranceFault">
+                <soap:fault name="getInsuranceFault" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="InsuranceWebService">
+        <wsdl:port name="Insurance" binding="ws:InsuranceSoap">
+            <soap:address location="http://localhost:8088/mockInsuranceSoap" />
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
